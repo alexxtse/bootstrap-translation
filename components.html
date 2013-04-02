@@ -1,0 +1,2636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>组件 · Bootstrap 2.3.1 - 中文翻译 - iXieMin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+  </head>
+
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">Bootstrap</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="./index.html">首页</a>
+              </li>
+              <li class="">
+                <a href="./getting-started.html">入门</a>
+              </li>
+              <li class="">
+                <a href="./scaffolding.html">框架</a>
+              </li>
+              <li class="">
+                <a href="./base-css.html">基础CSS</a>
+              </li>
+              <li class="active">
+                <a href="./components.html">组件</a>
+              </li>
+              <li class="">
+                <a href="./javascript.html">JavaScript</a>
+              </li>
+              <li class="">
+                <a href="./customize.html">自定义</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1>组件</h1>
+    <p class="lead">提供十几个可重用组件, 包括导航, 警示, 提示工具, 等等.</p>
+  </div>
+</header>
+
+
+  <div class="container">
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+      <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav">
+          <li><a href="#dropdowns"><i class="icon-chevron-right"></i> 下拉菜单</a></li>
+          <li><a href="#buttonGroups"><i class="icon-chevron-right"></i> 按钮组</a></li>
+          <li><a href="#buttonDropdowns"><i class="icon-chevron-right"></i> 按钮式下拉菜单</a></li>
+          <li><a href="#navs"><i class="icon-chevron-right"></i> 导航</a></li>
+          <li><a href="#navbar"><i class="icon-chevron-right"></i> 导航条</a></li>
+          <li><a href="#breadcrumbs"><i class="icon-chevron-right"></i> 路径式导航</a></li>
+          <li><a href="#pagination"><i class="icon-chevron-right"></i> 分页</a></li>
+          <li><a href="#labels-badges"><i class="icon-chevron-right"></i> 标签和标记</a></li>
+          <li><a href="#typography"><i class="icon-chevron-right"></i> 排版</a></li>
+          <li><a href="#thumbnails"><i class="icon-chevron-right"></i> 缩略图</a></li>
+          <li><a href="#alerts"><i class="icon-chevron-right"></i> 通知</a></li>
+          <li><a href="#progress"><i class="icon-chevron-right"></i> 进度条</a></li>
+          <li><a href="#media"><i class="icon-chevron-right"></i> 媒体对象</a></li>
+          <li><a href="#misc"><i class="icon-chevron-right"></i> 其他</a></li>
+        </ul>
+      </div>
+      <div class="span9">
+
+
+
+        <!-- Dropdowns
+        ================================================== -->
+        <section id="dropdowns">
+          <div class="page-header">
+            <h1>下拉菜单</h1>
+          </div>
+
+          <h2>例子</h2>
+          <p>可切换的链接列表. 互动式的下拉菜单需要<a href="./javascript.html#dropdowns">JavaScript下拉菜单插件</a>.</p>
+          <div class="bs-docs-example">
+            <div class="dropdown clearfix">
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+                <li><a tabindex="-1" href="#">行为</a></li>
+                <li><a tabindex="-1" href="#">其他行为</a></li>
+                <li><a tabindex="-1" href="#">特别行为</a></li>
+                <li class="divider"></li>
+                <li><a tabindex="-1" href="#">分割链接</a></li>
+              </ul>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;行为&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;其他行为&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;特别行为&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="divider"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;分割链接&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+          <h2>标记</h2>
+          <p>以下是下拉菜单所需的HTML. 下拉菜单的触发和下拉菜单都需要包含在<code>.dropdown</code>里, 或者声明 <code>position: relative;</code> 其他元素. 然后, 只需创建菜单.</p>
+
+<pre class="prettyprint linenums">
+&lt;div class="dropdown"&gt;
+  &lt;!-- Link or button to toggle dropdown --&gt;
+  &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
+    &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;行为&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;其他行为&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;特别行为&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="divider"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;分割链接&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+          <h2>选项</h2>
+          <p>列表右对齐, 和包括一个多级的下拉菜单.</p>
+
+          <h3>对齐</h3>
+          <p>在 <code>.dropdown-menu</code> 添加 <code>.pull-right</code> , 让下拉列表右对齐.</p>
+<pre class="prettyprint linenums">
+&lt;ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel"&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+
+          <h3>禁用菜单选项</h3>
+          <p>在下拉菜单<code>&lt;li&gt;</code>添加<code>.disabled</code>来禁用链接.</p>
+          <div class="bs-docs-example">
+            <div class="dropdown clearfix">
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+                <li><a tabindex="-1" href="#">注册</a></li>
+                <li class="disabled"><a tabindex="-1" href="#">修改</a></li>
+                <li><a tabindex="-1" href="#">退出</a></li>
+              </ul>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;注册&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="disabled"&gt;&lt;a tabindex="-1" href="#"&gt;修改&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;退出&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+          <h3>下拉菜单的子列表</h3>
+          <p>添加一些简单的标记, 让下拉菜单拥有一个二级菜单, 停选效果类似OS X. 在任意的 <code>li</code> 添加 <code>.dropdown-submenu</code> 就会自动获得一个额外的菜单.</p>
+          <div class="bs-docs-example bs-docs-example-submenus" style="min-height: 180px;">
+
+            <div class="pull-left">
+              <p class="muted">默认</p>
+              <div class="dropdown clearfix">
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                  <li><a tabindex="-1" href="#">行为</a></li>
+                  <li><a tabindex="-1" href="#">其他行为</a></li>
+                  <li><a tabindex="-1" href="#">特别行为</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">更多选项</a>
+                    <ul class="dropdown-menu">
+                      <li><a tabindex="-1" href="#">二级链接</a></li>
+                      <li><a tabindex="-1" href="#">二级链接</a></li>
+                      <li><a tabindex="-1" href="#">二级链接</a></li>
+                      <li><a tabindex="-1" href="#">二级链接</a></li>
+                      <li><a tabindex="-1" href="#">二级链接</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="pull-left">
+              <p class="muted">向上显示</p>
+              <div class="dropup">
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                  <li><a tabindex="-1" href="#">行为</a></li>
+                  <li><a tabindex="-1" href="#">其他行为</a></li>
+                  <li><a tabindex="-1" href="#">特别行为</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">更多选项</a>
+                    <ul class="dropdown-menu">
+                      <li><a tabindex="-1" href="#">二级链接</a></li>
+                      <li><a tabindex="-1" href="#">二级链接</a></li>
+                      <li><a tabindex="-1" href="#">二级链接</a></li>
+                      <li><a tabindex="-1" href="#">二级链接</a></li>
+                      <li><a tabindex="-1" href="#">二级链接</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="pull-left">
+              <p class="muted">左边显示</p>
+              <div class="dropdown">
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                  <li><a tabindex="-1" href="#">行为</a></li>
+                  <li><a tabindex="-1" href="#">其他行为</a></li>
+                  <li><a tabindex="-1" href="#">特别行为</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-submenu pull-left">
+                    <a tabindex="-1" href="#">更多选项</a>
+                    <ul class="dropdown-menu">
+                      <li><a tabindex="-1" href="#">二级链接</a></li>
+                      <li><a tabindex="-1" href="#">二级链接</a></li>
+                      <li><a tabindex="-1" href="#">二级链接</a></li>
+                      <li><a tabindex="-1" href="#">二级链接</a></li>
+                      <li><a tabindex="-1" href="#">二级链接</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
+  ...
+  &lt;li class="dropdown-submenu"&gt;
+    &lt;a tabindex="-1" href="#"&gt;更多选项&lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+        </section>
+
+
+
+
+        <!-- Button Groups
+        ================================================== -->
+        <section id="buttonGroups">
+          <div class="page-header">
+            <h1>按钮组</h1>
+          </div>
+
+          <h2>例子</h2>
+          <p>两个基本选项, 带有两个更明确的变化.</p>
+
+          <h3>单一按钮组</h3>
+          <p>带有 <code>.btn</code> 的按钮, 都放在 <code>.btn-group</code> 里面.</p>
+          <div class="bs-docs-example">
+            <div class="btn-group" style="margin: 9px 0 5px;">
+              <button class="btn">左</button>
+              <button class="btn">中</button>
+              <button class="btn">右</button>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="btn-group"&gt;
+  &lt;button class="btn"&gt;左&lt;/button&gt;
+  &lt;button class="btn"&gt;中&lt;/button&gt;
+  &lt;button class="btn"&gt;右&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>多个按钮组</h3>
+          <p>对于复杂的组件, 可把多个 <code>&lt;div class="btn-group"&gt;</code> 放在 <code>&lt;div class="btn-toolbar"&gt;</code> 里面.</p>
+          <div class="bs-docs-example">
+            <div class="btn-toolbar" style="margin: 0;">
+              <div class="btn-group">
+                <button class="btn">1</button>
+                <button class="btn">2</button>
+                <button class="btn">3</button>
+                <button class="btn">4</button>
+              </div>
+              <div class="btn-group">
+                <button class="btn">5</button>
+                <button class="btn">6</button>
+                <button class="btn">7</button>
+              </div>
+              <div class="btn-group">
+                <button class="btn">8</button>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="btn-toolbar"&gt;
+  &lt;div class="btn-group"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>垂直按钮组</h3>
+          <p>让一组按钮垂直摆放</p>
+          <div class="bs-docs-example">
+            <div class="btn-group btn-group-vertical">
+              <button type="button" class="btn"><i class="icon-align-left"></i></button>
+              <button type="button" class="btn"><i class="icon-align-center"></i></button>
+              <button type="button" class="btn"><i class="icon-align-right"></i></button>
+              <button type="button" class="btn"><i class="icon-align-justify"></i></button>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="btn-group btn-group-vertical"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h4>复选框和单选框形式</h4>
+          <p>按钮也可以有单选框或者复选框这样的功能. 点击 <a href="./javascript.html#buttons">这里</a> 看看.</p>
+
+          <h4>在按钮组的下拉菜单</h4>
+          <p><span class="label label-info">注意!</span> 为了渲染正确, 具有下拉菜单的按钮必须单独放在 <code>.btn-toolbar</code> 里, 并放进 <code>.btn-group</code>.</p>
+        </section>
+
+
+
+        <!-- Split button dropdowns
+        ================================================== -->
+        <section id="buttonDropdowns">
+          <div class="page-header">
+            <h1>按钮式下拉菜单</h1>
+          </div>
+
+
+          <h2>概述和例子</h2>
+          <p>通过将其放在 <code>.btn-group</code> 并添加一些下拉菜单的标记, 让点击按钮生产一个下拉菜单.</p>
+          <div class="bs-docs-example">
+            <div class="btn-toolbar" style="margin: 0;">
+              <div class="btn-group">
+                <button class="btn dropdown-toggle" data-toggle="dropdown">行为 <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">行为 <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">危险 <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">警告 <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">成功 <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">信息 <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">反向 <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div><!-- /btn-toolbar -->
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="btn-group"&gt;
+  &lt;a class="btn dropdown-toggle" data-toggle="dropdown" href="#"&gt;
+    Action
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- 下拉菜单 --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>兼容所有按钮大小</h3>
+          <p>按钮式下拉菜单支持所有按钮大小:  <code>.btn-large</code>, <code>.btn-small</code>, 或 <code>.btn-mini</code>.</p>
+          <div class="bs-docs-example">
+            <div class="btn-toolbar" style="margin: 0;">
+              <div class="btn-group">
+                <button class="btn btn-large dropdown-toggle" data-toggle="dropdown">大号按钮 <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-small dropdown-toggle" data-toggle="dropdown">小号按钮 <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">迷你按钮 <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div><!-- /btn-toolbar -->
+          </div>
+
+          <h3>加入JavaScript</h3>
+          <p>按钮式下拉菜单的某些功能需要 <a href="./javascript.html#dropdowns">Bootstrap下拉菜单插件</a>.</p>
+          <p>在某些情况, 如下拉菜单在手机上将会伸展. 你需要手动进行修改或者使用JavaScript.</p>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>拆分式按钮下拉菜单</h2>
+          <p>在按钮组的基础上, 我们很容易创建拆分式的按钮. 拆分式按钮左边设有一个标准形式按钮, 右边是一个可触发下拉菜单的链接.</p>
+          <div class="bs-docs-example">
+            <div class="btn-toolbar" style="margin: 0;">
+              <div class="btn-group">
+                <button class="btn">行为</button>
+                <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-primary">行为</button>
+                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-danger">危险</button>
+                <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-warning">警告</button>
+                <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-success">成功</button>
+                <button class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-info">信息</button>
+                <button class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-inverse">反向</button>
+                <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div><!-- /btn-toolbar -->
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="btn-group"&gt;
+  &lt;button class="btn"&gt;Action&lt;/button&gt;
+  &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- 下拉菜单 --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>尺寸</h3>
+          <p>使用按钮尺寸属性调整大小 <code>.btn-mini</code>, <code>.btn-small</code>, 或 <code>.btn-large</code>.</p>
+          <div class="bs-docs-example">
+            <div class="btn-toolbar">
+              <div class="btn-group">
+                <button class="btn btn-large">大</button>
+                <button class="btn btn-large dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div><!-- /btn-toolbar -->
+            <div class="btn-toolbar">
+              <div class="btn-group">
+                <button class="btn btn-small">小</button>
+                <button class="btn btn-small dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div><!-- /btn-toolbar -->
+            <div class="btn-toolbar">
+              <div class="btn-group">
+                <button class="btn btn-mini">迷你</button>
+                <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div><!-- /btn-toolbar -->
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="btn-group"&gt;
+  &lt;button class="btn btn-mini"&gt;Action&lt;/button&gt;
+  &lt;button class="btn btn-mini dropdown-toggle" data-toggle="dropdown"&gt;
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- 下拉菜单 --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>菜单向上显示</h3>
+          <p>在<code>.dropdown-menu</code>父级添加一个属性, 下拉菜单就可以由下到上显示. <code>.caret</code> 的标识将会自动翻转, 以及菜单的位置是由下到上移动, 而不是由上至下.</p>
+          <div class="bs-docs-example">
+            <div class="btn-toolbar" style="margin: 0;">
+              <div class="btn-group dropup">
+                <button class="btn">向上显示</button>
+                <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group dropup">
+                <button class="btn primary">右对齐向上显示</button>
+                <button class="btn primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu pull-right">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="btn-group dropup"&gt;
+  &lt;button class="btn"&gt;Dropup&lt;/button&gt;
+  &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- dropdown menu links --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+        </section>
+
+
+
+        <!-- Nav, Tabs, & Pills
+        ================================================== -->
+        <section id="navs">
+          <div class="page-header">
+            <h1>导航: 标签, 圆角, 和 列表</small></h1>
+          </div>
+
+          <h2>默认 <small>相同的标记, 不同的属性</small></h2>
+          <p>所有的导航组件都在这里, 包括标签, 圆角, 列表, 通过<code>.nav</code>属性<strong>共享相同的标记和样式</strong>.</p>
+
+          <h3>基本标签</h3>
+          <p>使用 <code>&lt;ul&gt;</code> 并添加 <code>.nav-tabs</code> :</p>
+          <div class="bs-docs-example">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#">首页</a></li>
+              <li><a href="#">简介</a></li>
+              <li><a href="#">信息</a></li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-tabs"&gt;
+  &lt;li class="active"&gt;
+    &lt;a href="#"&gt;首页&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+          <h3>基本圆角</h3>
+          <p>使用相同的HTML, 但这里使用 <code>.nav-pills</code> :</p>
+          <div class="bs-docs-example">
+            <ul class="nav nav-pills">
+              <li class="active"><a href="#">首页</a></li>
+              <li><a href="#">简介</a></li>
+              <li><a href="#">信息</a></li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-pills"&gt;
+  &lt;li class="active"&gt;
+    &lt;a href="#"&gt;首页&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+          <h3>不可用状态</h3>
+          <p>在任何的导航组件(标签, 圆角或列表)添加 <code>.disabled</code>, <strong>链接将变成灰色</strong>, 且没有停悬效果. 但是链接仍然保持可点击, 除非删除了<code>href</code>属性. 或者你也可用JavaScript来防止点击.</p>
+          <div class="bs-docs-example">
+            <ul class="nav nav-pills">
+              <li><a href="#">可点击链接</a></li>
+              <li><a href="#">可点击链接</a></li>
+              <li class="disabled"><a href="#">不可点击链接</a></li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-pills"&gt;
+  ...
+  &lt;li class="disabled"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+
+          <h3>组件对齐方式</h3>
+          <p>使用 <code>.pull-left</code> or <code>.pull-right</code> 让导航链接对齐. 它们都是添加了CSS float来指定方向.</p>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>堆式排列</h2>
+          <p>标签和圆角在默认的情况下是水平展示, 只需添加一个属性, <code>.nav-stacked</code>, 就可让它们垂直展示.</p>
+
+          <h3>标签</h3>
+          <div class="bs-docs-example">
+            <ul class="nav nav-tabs nav-stacked">
+              <li class="active"><a href="#">首页</a></li>
+              <li><a href="#">简介</a></li>
+              <li><a href="#">信息</a></li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-tabs nav-stacked"&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+
+          <h3>圆角</h3>
+          <div class="bs-docs-example">
+            <ul class="nav nav-pills nav-stacked">
+              <li class="active"><a href="#">首页</a></li>
+              <li><a href="#">简介</a></li>
+              <li><a href="#">信息</a></li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-pills nav-stacked"&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>下拉菜单</h2>
+          <p>添加下拉菜单需要添加一些额外的HTML代码和<a href="./javascript.html#dropdowns">下拉菜单的JavaScript插件</a>.</p>
+
+          <h3>标签</h3>
+          <div class="bs-docs-example">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#">首页</a></li>
+              <li><a href="#">帮助</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">下拉菜单 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">链接一</a></li>
+                  <li><a href="#">链接二</a></li>
+                  <li><a href="#">链接三</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">链接四</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-tabs"&gt;
+  &lt;li class="dropdown"&gt;
+    &lt;a class="dropdown-toggle"
+       data-toggle="dropdown"
+       href="#"&gt;
+        Dropdown
+        &lt;b class="caret"&gt;&lt;/b&gt;
+      &lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      &lt;!-- links --&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+          <h3>圆角</h3>
+          <div class="bs-docs-example">
+            <ul class="nav nav-pills">
+              <li class="active"><a href="#">首页</a></li>
+              <li><a href="#">帮助</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">下拉菜单 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">链接一</a></li>
+                  <li><a href="#">链接二</a></li>
+                  <li><a href="#">链接三</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">链接四</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-pills"&gt;
+  &lt;li class="dropdown"&gt;
+    &lt;a class="dropdown-toggle"
+       data-toggle="dropdown"
+       href="#"&gt;
+        Dropdown
+        &lt;b class="caret"&gt;&lt;/b&gt;
+      &lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      &lt;!-- links --&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>导航列表</h2>
+          <p>一个简单容易的方法构建带有可选头部的导航. 它们很适合使用在侧边栏, 就像是OS X的Finder.</p>
+
+          <h3>例子</h3>
+          <p>使用列表链接并添加 <code>class="nav nav-list"</code>:</p>
+          <div class="bs-docs-example">
+            <div class="well" style="max-width: 340px; padding: 8px 0;">
+              <ul class="nav nav-list">
+                <li class="nav-header">列表头</li>
+                <li class="active"><a href="#">首页</a></li>
+                <li><a href="#">库</a></li>
+                <li><a href="#">应用程序</a></li>
+                <li class="nav-header">其他列表头</li>
+                <li><a href="#">简介</a></li>
+                <li><a href="#">设置</a></li>
+                <li class="divider"></li>
+                <li><a href="#">帮助</a></li>
+              </ul>
+            </div> <!-- /well -->
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-list"&gt;
+  &lt;li class="nav-header"&gt;列表头&lt;/li&gt;
+  &lt;li class="active"&gt;&lt;a href="#"&gt;首页&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;库&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+          <p>
+            <span class="label label-info">注意</span>
+            对于嵌入在导航列表的任何 <code>&lt;ul&gt;</code> 都需要添加 <code>class="nav nav-list"</code> .
+          </p>
+
+          <h3>水平分隔符</h3>
+          <p>添加一个水平分隔符, 只需在空列表项添加<code>.divider</code>, 像这样:</p>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-list"&gt;
+  ...
+  &lt;li class="divider"&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>可切换标签导航</h2>
+          <p>用一个简单的插件, 可让标签之间进行内容切换. Bootstrap对其整合了4种风格: 上(默认), 右, 下, 左.</p>
+
+          <h3>例子</h3>
+          <p>让标签可切换, 需在<code>.tab-content</code>里创建<code>.tab-pane</code>, 并对每个标签设置一个唯一的ID.</p>
+          <div class="bs-docs-example">
+            <div class="tabbable" style="margin-bottom: 18px;">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab1" data-toggle="tab">标签 1</a></li>
+                <li><a href="#tab2" data-toggle="tab">标签 2</a></li>
+                <li><a href="#tab3" data-toggle="tab">标签 3</a></li>
+              </ul>
+              <div class="tab-content" style="padding-bottom: 9px; border-bottom: 1px solid #ddd;">
+                <div class="tab-pane active" id="tab1">
+                  <p>我是标签 1.</p>
+                </div>
+                <div class="tab-pane" id="tab2">
+                  <p>Hi, 我是标签 2.</p>
+                </div>
+                <div class="tab-pane" id="tab3">
+                  <p>怎么了, 我是标签 3.</p>
+                </div>
+              </div>
+            </div> <!-- /tabbable -->
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="tabbable"&gt; &lt;!-- Only required for left/right tabs --&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    &lt;li class="active"&gt;&lt;a href="#tab1" data-toggle="tab"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#tab2" data-toggle="tab"&gt;Section 2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    &lt;div class="tab-pane active" id="tab1"&gt;
+      &lt;p&gt;我是标签 1.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab2"&gt;
+      &lt;p&gt;Hi, 我是标签 2.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+          <h4>淡入</h4>
+          <p>要让内容淡入, 需在每个<code>.tab-pane</code>添加<code>.fade</code> .</p>
+
+          <h4>需要jQuery插件</h4>
+          <p>所有可切换标签都采用了轻量级的jQuery插件. 在<a href="./javascript.html#tabs">JavaScript文档页面</a>了解更多如果创建可切换标签.</p>
+
+          <h3>各个方向的标签</h3>
+
+          <h4>底部</h4>
+          <p>翻转HTML的顺序, 并添加一个属性(.tabs-below)让标签置底.</p>
+          <div class="bs-docs-example">
+            <div class="tabbable tabs-below">
+              <div class="tab-content">
+                <div class="tab-pane active" id="A">
+                  <p>我在A.</p>
+                </div>
+                <div class="tab-pane" id="B">
+                  <p>我在B.</p>
+                </div>
+                <div class="tab-pane" id="C">
+                  <p>我在C.</p>
+                </div>
+              </div>
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#A" data-toggle="tab">第一部分</a></li>
+                <li><a href="#B" data-toggle="tab">第二部分</a></li>
+                <li><a href="#C" data-toggle="tab">第三部分</a></li>
+              </ul>
+            </div> <!-- /tabbable -->
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="tabbable tabs-below"&gt;
+  &lt;div class="tab-content"&gt;
+    ...
+  &lt;/div&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+          <h4>左边</h4>
+          <p>添加一个属性(.tabs-left)让标签居左.</p>
+          <div class="bs-docs-example">
+            <div class="tabbable tabs-left">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#lA" data-toggle="tab">第一部分</a></li>
+                <li><a href="#lB" data-toggle="tab">第二部分</a></li>
+                <li><a href="#lC" data-toggle="tab">第三部分</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="lA">
+                  <p>我在A.</p>
+                </div>
+                <div class="tab-pane" id="lB">
+                  <p>我在B.</p>
+                </div>
+                <div class="tab-pane" id="lC">
+                  <p>我在C.</p>
+                </div>
+              </div>
+            </div> <!-- /tabbable -->
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="tabbable tabs-left"&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    ...
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+          <h4>右边</h4>
+          <p>添加一个属性(.tabs-right)让标签居右.</p>
+          <div class="bs-docs-example">
+            <div class="tabbable tabs-right">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#rA" data-toggle="tab">第一部分</a></li>
+                <li><a href="#rB" data-toggle="tab">第二部分</a></li>
+                <li><a href="#rC" data-toggle="tab">第三部分</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="rA">
+                  <p>我在A.</p>
+                </div>
+                <div class="tab-pane" id="rB">
+                  <p>我在B.</p>
+                </div>
+                <div class="tab-pane" id="rC">
+                  <p>我在C.</p>
+                </div>
+              </div>
+            </div> <!-- /tabbable -->
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="tabbable tabs-right"&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    ...
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+        </section>
+
+
+
+        <!-- Navbar
+        ================================================== -->
+        <section id="navbar">
+          <div class="page-header">
+            <h1>导航条</h1>
+          </div>
+
+
+          <h2>基本导航条</h2>
+          <p>导航条是静态的(未固定在顶部), 并包括项目名词和一些导航该有的功能. 将导航条放在任意一个 <code>.container</code>, 其宽度是与网站内容相同.</p>
+          <div class="bs-docs-example">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <a class="brand" href="#">标题</a>
+                <ul class="nav">
+                  <li class="active"><a href="#">首页</a></li>
+                  <li><a href="#">链接</a></li>
+                  <li><a href="#">链接</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="navbar"&gt;
+  &lt;div class="navbar-inner"&gt;
+    &lt;a class="brand" href="#"&gt;标题&lt;/a&gt;
+    &lt;ul class="nav"&gt;
+      &lt;li class="active"&gt;&lt;a href="#"&gt;首页&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;链接&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;链接&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>导航条组件</h2>
+
+          <h3>仅标题</h3>
+          <p>一个简单的链接, 只显示你的名牌或项目名称.</p>
+          <div class="bs-docs-example">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <a class="brand" href="#">名称</a>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;a class="brand" href="#"&gt;名称&lt;/a&gt;
+</pre>
+
+          <h3>导航链接</h3>
+          <p>可以简单的往导航添加列表.</p>
+          <div class="bs-docs-example">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <ul class="nav">
+                  <li class="active"><a href="#">首页</a></li>
+                  <li><a href="#">链接</a></li>
+                  <li><a href="#">链接</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="nav"&gt;
+  &lt;li class="active"&gt;
+    &lt;a href="#">首页&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;链接&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;链接&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+          <p>添加分隔符同样的简单, 只需在每个空白的列表项添加一个属性即可. 在每个链接间添加, 如下:</p>
+          <div class="bs-docs-example">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <ul class="nav">
+                  <li class="active"><a href="#">首页</a></li>
+                  <li class="divider-vertical"></li>
+                  <li><a href="#">链接</a></li>
+                  <li class="divider-vertical"></li>
+                  <li><a href="#">链接</a></li>
+                  <li class="divider-vertical"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="nav"&gt;
+  ...
+  &lt;li class="divider-vertical"&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+
+          <h3>表单</h3>
+          <p>如要一个表单以正确的位置和样式显示在导航内, 需要添加如下所示的属性. 对于默认的表单, 需要包含一个 <code>.navbar-form</code> 以及一个 <code>.pull-left</code> 或 <code>.pull-right</code> 来说明对齐的位置.</p>
+          <div class="bs-docs-example">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <form class="navbar-form pull-left">
+                  <input type="text" class="span2">
+                  <button type="submit" class="btn">提交</button>
+                </form>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;form class="navbar-form pull-left"&gt;
+  &lt;input type="text" class="span2"&gt;
+  &lt;button type="submit" class="btn"&gt;提交&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+
+          <h3>搜索表单</h3>
+          <p>在导航条内, 对 <code>form</code> 添加 <code>.navbar-search</code> 并在输入框添加专门的一个属性 <code>.search-query</code>, 就可获得一个搜索表单.</p>
+          <div class="bs-docs-example">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <form class="navbar-search pull-left">
+                  <input type="text" class="search-query" placeholder="搜索">
+                </form>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;form class="navbar-search pull-left"&gt;
+  &lt;input type="text" class="search-query" placeholder="搜索"&gt;
+&lt;/form&gt;
+</pre>
+
+          <h3>对齐</h3>
+          <p>使用 <code>.pull-left</code> 或 <code>.pull-right</code> 对齐导航链接, 搜索表单或文本. 它们都是添加了CSS float来指定方向.</p>
+
+          <h3>使用下拉菜单</h3>
+          <p>在导航添加下拉菜单只需要加入一点点标记和<a href="./javascript.html#dropdowns">下拉菜单JavaScript插件</a>.</p>
+<pre class="prettyprint linenums">
+&lt;ul class="nav"&gt;
+  &lt;li class="dropdown"&gt;
+    &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown">
+      Account
+      &lt;b class="caret"&gt;&lt;/b&gt;
+    &lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+          <p>查看更多<a href="./javascript.html#dropdowns">JavaScript下拉菜单文档</a>.</p>
+
+          <h3>文本</h3>
+          <p>在 <code>.navbar-text</code> 下使用文本元素, 对于需要突出或设置颜色, 通常使用 <code>&lt;p&gt;</code> 标签.</p>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>可选的显示方法</h2>
+          <p>在最外层div<code>.navbar</code>添加一个额外的属性, 就可把导航条固定在顶部或者底部.</p>
+
+          <h3>固定在顶部</h3>
+          <p>添加 <code>.navbar-fixed-top</code> 以及记得在<code>&lt;body&gt;</code>的顶部添加一个至少40px的<code>padding</code>. 确保是添加在Bootstrap核心CSS代码之后, 和响应式CSS代码(可选)之前.</p>
+          <div class="bs-docs-example bs-navbar-top-example">
+            <div class="navbar navbar-fixed-top" style="position: absolute;">
+              <div class="navbar-inner">
+                <div class="container" style="width: auto; padding: 0 20px;">
+                  <a class="brand" href="#">标题</a>
+                  <ul class="nav">
+                    <li class="active"><a href="#">首页</a></li>
+                    <li><a href="#">链接</a></li>
+                    <li><a href="#">链接</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="navbar navbar-fixed-top"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+          <h3>固定在底部</h3>
+          <p>添加 <code>.navbar-fixed-bottom</code> .</p>
+          <div class="bs-docs-example bs-navbar-bottom-example">
+            <div class="navbar navbar-fixed-bottom" style="position: absolute;">
+              <div class="navbar-inner">
+                <div class="container" style="width: auto; padding: 0 20px;">
+                  <a class="brand" href="#">标题</a>
+                  <ul class="nav">
+                    <li class="active"><a href="#">首页</a></li>
+                    <li><a href="#">链接</a></li>
+                    <li><a href="#">链接</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="navbar navbar-fixed-bottom"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+          <h3>顶部静态导航条</h3>
+          <p>通过添加 <code>.navbar-static-top</code> 创建一个全宽(full-width)的导航条. 这不像<code>.navbar-fixed-top</code>, 因为你不需要在<code>body</code>改动任何padding.</p>
+          <div class="bs-docs-example bs-navbar-top-example">
+            <div class="navbar navbar-static-top" style="margin: -1px -1px 0;">
+              <div class="navbar-inner">
+                <div class="container" style="width: auto; padding: 0 20px;">
+                  <a class="brand" href="#">标题</a>
+                  <ul class="nav">
+                    <li class="active"><a href="#">首页</a></li>
+                    <li><a href="#">链接</a></li>
+                    <li><a href="#">链接</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="navbar navbar-static-top"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>响应式导航条</h2>
+          <p>要实现一个响应式导航条, 需要把导航条包含在div<code>.nav-collapse.collapse</code>里面, 并添加一个触发展开导航(适用在屏幕较窄的设备)的按钮<code>.btn-navbar</code>.</p>
+          <div class="bs-docs-example">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="container">
+                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </a>
+                  <a class="brand" href="#">标题</a>
+                  <div class="nav-collapse collapse navbar-responsive-collapse">
+                    <ul class="nav">
+                      <li class="active"><a href="#">首页</a></li>
+                      <li><a href="#">链接</a></li>
+                      <li><a href="#">链接</a></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">下拉菜单 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">行为</a></li>
+                          <li><a href="#">其他行为</a></li>
+                          <li><a href="#">点击!</a></li>
+                          <li class="divider"></li>
+                          <li class="nav-header">导航头部</li>
+                          <li><a href="#">A</a></li>
+                          <li><a href="#">B</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <form class="navbar-search pull-left" action="">
+                      <input type="text" class="search-query span2" placeholder="搜索">
+                    </form>
+                    <ul class="nav pull-right">
+                      <li><a href="#">链接</a></li>
+                      <li class="divider-vertical"></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">下拉菜单 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">行为</a></li>
+                          <li><a href="#">其他</a></li>
+                          <li><a href="#">点击!</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">设置</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div><!-- /.nav-collapse -->
+                </div>
+              </div><!-- /navbar-inner -->
+            </div><!-- /navbar -->
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="navbar"&gt;
+  &lt;div class="navbar-inner"&gt;
+    &lt;div class="container"&gt;
+
+      &lt;!-- .btn-navbar is used as the toggle for collapsed navbar content --&gt;
+      &lt;a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;/a&gt;
+
+      &lt;!-- Be sure to leave the brand out there if you want it shown --&gt;
+      &lt;a class="brand" href="#"&gt;Project name&lt;/a&gt;
+
+      &lt;!-- Everything you want hidden at 940px or less, place within here --&gt;
+      &lt;div class="nav-collapse collapse"&gt;
+        &lt;!-- .nav, .navbar-search, .navbar-form, etc --&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+          <div class="alert alert-info">
+            <strong>注意!</strong> 响应式导航条需要 <a href="./javascript.html#collapse">切换(collapse)插件</a> 和 <a href="./scaffolding.html#responsive">Bootstrap响应式CSS文件</a>.
+          </div>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>逆变化</h2>
+          <p>需要变化导航条外观(变成黑色), 可添加<code>.navbar-inverse</code>.</p>
+          <div class="bs-docs-example">
+            <div class="navbar navbar-inverse" style="position: static;">
+              <div class="navbar-inner">
+                <div class="container">
+                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </a>
+                  <a class="brand" href="#">标题</a>
+                  <div class="nav-collapse collapse navbar-inverse-collapse">
+                    <ul class="nav">
+                      <li class="active"><a href="#">首页</a></li>
+                      <li><a href="#">链接</a></li>
+                      <li><a href="#">链接</a></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">下拉菜单 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">点击我</a></li>
+                          <li><a href="#">别点击我</a></li>
+                          <li><a href="#">求点击</a></li>
+                          <li class="divider"></li>
+                          <li class="nav-header">导航头部</li>
+                          <li><a href="#">A君</a></li>
+                          <li><a href="#">B君</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <form class="navbar-search pull-left" action="">
+                      <input type="text" class="search-query span2" placeholder="Search">
+                    </form>
+                    <ul class="nav pull-right">
+                      <li><a href="#">链接</a></li>
+                      <li class="divider-vertical"></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">设置 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">基本信息</a></li>
+                          <li><a href="#">特别信息</a></li>
+                          <li><a href="#">联系方式</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">申请VIP</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div><!-- /.nav-collapse -->
+                </div>
+              </div><!-- /navbar-inner -->
+            </div><!-- /navbar -->
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="navbar navbar-inverse"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+        </section>
+
+
+
+        <!-- Breadcrumbs
+        ================================================== -->
+        <section id="breadcrumbs">
+          <div class="page-header">
+            <h1>路径式导航 <small></small></h1>
+          </div>
+
+          <h2>例子</h2>
+          <p>查看某个页面, 可以需要跳转多个页面, 可使用路径式导航方便使用者返回.</p>
+          <div class="bs-docs-example">
+            <ul class="breadcrumb">
+              <li class="active">首页</li>
+            </ul>
+            <ul class="breadcrumb">
+              <li><a href="#">首页</a> <span class="divider">/</span></li>
+              <li class="active">库</li>
+            </ul>
+            <ul class="breadcrumb" style="margin-bottom: 5px;">
+              <li><a href="#">首页</a> <span class="divider">/</span></li>
+              <li><a href="#">库</a> <span class="divider">/</span></li>
+              <li class="active">数据</li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="breadcrumb"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;首页&lt;/a&gt; &lt;span class="divider"&gt;/&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;库&lt;/a&gt; &lt;span class="divider"&gt;/&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="active"&gt;数据&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+        </section>
+
+
+
+        <!-- Pagination
+        ================================================== -->
+        <section id="pagination">
+          <div class="page-header">
+            <h1>分页 <small>供两种可选择内容分页</small></h1>
+          </div>
+
+          <h2>标准分页</h2>
+          <p>如此简洁的分页的灵感来自Rdio, 非常适合应用程序和显示搜索结果. 简洁大块的分页不容易看错, 容易扩展, 并有更大的点击区域不易点错.</p>
+          <div class="bs-docs-example">
+            <div class="pagination">
+              <ul>
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="pagination"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Prev&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Next&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>选项</h2>
+
+          <h3>不可用和当前状态</h3>
+          <p>在不同情况下, 可自定义链接. 使用 <code>.disabled</code> 让链接不可用, 使用 <code>.active</code> 表示当前页面.</p>
+          <div class="bs-docs-example">
+            <div class="pagination pagination-centered">
+              <ul>
+                <li class="disabled"><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+             </ul>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="pagination"&gt;
+  &lt;ul&gt;
+    &lt;li class="disabled"&gt;&lt;a href="#"&gt;&amp;laquo;&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="active"&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+          <p>也可以使用span标签替换a标签, 这样可以删除点击功能, 同时又保留了样式.</p>
+<pre class="prettyprint linenums">
+&lt;div class="pagination"&gt;
+  &lt;ul&gt;
+    &lt;li class="disabled"&gt;&lt;span&gt;Prev&lt;/span&gt;&lt;/li&gt;
+    &lt;li class="active"&gt;&lt;span&gt;1&lt;/span&gt;&lt;/li&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>大小</h3>
+          <p>想要更大或更小的分页? 添加<code>.pagination-large</code>, <code>.pagination-small</code>, 或 <code>.pagination-mini</code> 就可改变分页大小.</p>
+          <div class="bs-docs-example">
+            <div class="pagination pagination-large">
+              <ul>
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+            </div>
+            <div class="pagination">
+              <ul>
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+             </ul>
+            </div>
+            <div class="pagination pagination-small">
+              <ul>
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+            </div>
+            <div class="pagination pagination-mini">
+              <ul>
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="pagination pagination-large"&gt;
+  &lt;ul&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="pagination"&gt;
+  &lt;ul&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="pagination pagination-small"&gt;
+  &lt;ul&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="pagination pagination-mini"&gt;
+  &lt;ul&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>对齐</h3>
+          <p>添加其中一个属性就可改变分页对齐位置: <code>.pagination-centered</code> 和 <code>.pagination-right</code>.</p>
+          <div class="bs-docs-example">
+            <div class="pagination pagination-centered">
+              <ul>
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+             </ul>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="pagination pagination-centered"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+          <div class="bs-docs-example">
+            <div class="pagination pagination-right">
+              <ul>
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="pagination pagination-right"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>翻页</h2>
+          <p>用更少的标记和样式, 创建用于简单快速分页. 非常适用于简单的网站, 像博客或者杂志网站.</p>
+
+          <h3>默认</h3>
+          <p>默认情况下, 翻页链接居中.</p>
+          <div class="bs-docs-example">
+            <ul class="pager">
+              <li><a href="#">上一页</a></li>
+              <li><a href="#">下一页</a></li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="pager"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;上一页&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;下一页&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+          <h3>左右两边链接</h3>
+          <p>另外, 你可以把每个链接分别居于左右两边:</p>
+          <div class="bs-docs-example">
+            <ul class="pager">
+              <li class="previous"><a href="#">&larr; 较旧的</a></li>
+              <li class="next"><a href="#">较新的 &rarr;</a></li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="pager"&gt;
+  &lt;li class="previous"&gt;
+    &lt;a href="#"&gt;&amp;larr; 较旧的&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="next"&gt;
+    &lt;a href="#"&gt;较新的 &amp;rarr;&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+          <h3>不可用状态</h3>
+          <p>同样也是使用 <code>.disabled</code> 让其显示不可用状态.</p>
+          <div class="bs-docs-example">
+            <ul class="pager">
+              <li class="previous disabled"><a href="#">&larr; 较旧的</a></li>
+              <li class="next"><a href="#">较新的 &rarr;</a></li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="pager"&gt;
+  &lt;li class="previous disabled"&gt;
+    &lt;a href="#"&gt;&amp;larr; 较旧的&lt;/a&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+
+        </section>
+
+
+
+        <!-- Labels and badges
+        ================================================== -->
+        <section id="labels-badges">
+          <div class="page-header">
+            <h1>标签和标记</h1>
+          </div>
+          <h3>标签</h3>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>标签</th>
+                <th>标记</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span class="label">默认</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label"&gt;默认&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="label label-success">成功</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label label-success"&gt;成功&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="label label-warning">警告</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label label-warning"&gt;警告&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="label label-important">重要</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label label-important"&gt;重要&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="label label-info">信息</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label label-info"&gt;信息&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="label label-inverse">反向</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label label-inverse"&gt;反向&lt;/span&gt;</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>标记</h3>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>名称</th>
+                <th>例子</th>
+                <th>标记</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  默认
+                </td>
+                <td>
+                  <span class="badge">1</span>
+                </td>
+                <td>
+                  <code>&lt;span class="badge"&gt;1&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  成功
+                </td>
+                <td>
+                  <span class="badge badge-success">2</span>
+                </td>
+                <td>
+                  <code>&lt;span class="badge badge-success"&gt;2&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  警告
+                </td>
+                <td>
+                  <span class="badge badge-warning">4</span>
+                </td>
+                <td>
+                  <code>&lt;span class="badge badge-warning"&gt;4&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  重要
+                </td>
+                <td>
+                  <span class="badge badge-important">6</span>
+                </td>
+                <td>
+                  <code>&lt;span class="badge badge-important"&gt;6&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  信息
+                </td>
+                <td>
+                  <span class="badge badge-info">8</span>
+                </td>
+                <td>
+                  <code>&lt;span class="badge badge-info"&gt;8&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  反向
+                </td>
+                <td>
+                  <span class="badge badge-inverse">10</span>
+                </td>
+                <td>
+                  <code>&lt;span class="badge badge-inverse"&gt;10&lt;/span&gt;</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>可以轻松实现隐藏</h3>
+          <p>为了方便使用, 在(文件)没有任何内容或没有未读信息, 通过CSS<code>:empty</code>选择器可以很方便的把标签和标记隐藏掉.</p>
+
+        </section>
+
+
+
+        <!-- Typographic components
+        ================================================== -->
+        <section id="typography">
+          <div class="page-header">
+            <h1>排版组件</h1>
+          </div>
+
+          <h2>Hero单元</h2>
+          <p>一个轻量级、灵活的组件, 能在你网站上展示重点内容. 很适合在营销类或突出内容类网站使用.</p>
+          <div class="bs-docs-example">
+            <div class="hero-unit">
+              <h1>iTunes!</h1>
+              <p>iTunes 已经完全重新设计, 让你更轻松地浏览与管理你的音乐、视频及更多内容。添加收藏也更简易，还可随时随地播放。.</p>
+              <p><a class="btn btn-primary btn-large">了解更多</a></p>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="hero-unit"&gt;
+  &lt;h1&gt;Heading&lt;/h1&gt;
+  &lt;p&gt;Tagline&lt;/p&gt;
+  &lt;p&gt;
+    &lt;a class="btn btn-primary btn-large"&gt;
+      Learn more
+    &lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+          <h2>页面标题</h2>
+          <p>在页面上给 <code>h1</code> 适当的间隔和显示一段内容. 它可以使用 <code>h1</code> 里的默认 <code>small</code> 元素, 以及其他提供额外样式的元素.</p>
+          <div class="bs-docs-example">
+            <div class="page-header">
+              <h1>简单就是美 <small>iTunes 里你喜爱的一切，如今变得更出色、更简单。</small></h1>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="page-header"&gt;
+  &lt;h1&gt;简单就是美 &lt;small&gt;iTunes 里你喜爱的一切，如今变得更出色、更简单。&lt;/small&gt;&lt;/h1&gt;
+&lt;/div&gt;
+</pre>
+
+        </section>
+
+
+
+        <!-- Thumbnails
+        ================================================== -->
+        <section id="thumbnails">
+          <div class="page-header">
+            <h1>缩略图 <small>网格式图片, 视频, 文本, 等等</small></h1>
+          </div>
+
+          <h2>默认缩略图</h2>
+          <p>默认情况下, 实现Bootstrap下的缩略图图像, 只需少量标记.</p>
+          <div class="row-fluid">
+            <ul class="thumbnails">
+              <li class="span3">
+                <a href="#" class="thumbnail">
+                  <img data-src="holder.js/260x180" alt="">
+                </a>
+              </li>
+              <li class="span3">
+                <a href="#" class="thumbnail">
+                  <img data-src="holder.js/260x180" alt="">
+                </a>
+              </li>
+              <li class="span3">
+                <a href="#" class="thumbnail">
+                  <img data-src="holder.js/260x180" alt="">
+                </a>
+              </li>
+              <li class="span3">
+                <a href="#" class="thumbnail">
+                  <img data-src="holder.js/260x180" alt="">
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <h2>自定义</h2>
+          <p>只要添加一点额外的标记, 就可以在缩略图里添加任何类型的HTML内容, 如标题, 段落, 或按钮.</p>
+          <div class="row-fluid">
+            <ul class="thumbnails">
+              <li class="span4">
+                <div class="thumbnail">
+                  <img data-src="holder.js/300x200" alt="">
+                  <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><a href="#" class="btn btn-primary">Action</a> <a href="#" class="btn">Action</a></p>
+                  </div>
+                </div>
+              </li>
+              <li class="span4">
+                <div class="thumbnail">
+                  <img data-src="holder.js/300x200" alt="">
+                  <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><a href="#" class="btn btn-primary">Action</a> <a href="#" class="btn">Action</a></p>
+                  </div>
+                </div>
+              </li>
+              <li class="span4">
+                <div class="thumbnail">
+                  <img data-src="holder.js/300x200" alt="">
+                  <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><a href="#" class="btn btn-primary">Action</a> <a href="#" class="btn">Action</a></p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <h3>为什么要使用缩略图</h3>
+          <p>缩略图 (1.4版本后移除 <code>.media-grid</code>) 很适合网格式图片或视频, 图片搜索结果, 零售产品, 文件夹, 等等. 它们可以是链接或静态内容.</p>
+
+          <h3>简单, 灵活的标记</h3>
+          <p>缩略图的标记十分简单, 一个 <code>ul</code> 里嵌套几个 <code>li</code> 元素. 这同样是超级灵活的, 只需在标记里面放入你任何类型的内容.</p>
+
+          <h3>使用网格列的大小</h3>
+          <p>最后, 缩略图组件使用现有的网格系统属性, 像 <code>.span2</code> 或 <code>.span3</code>, 以控制缩略图尺寸.</p>
+
+          <h2>标记</h2>
+          <p>正如前面所提到的, 所需的标记是轻量的, 简单的. 下面就来看看 <strong>链接图像</strong> 的默认设置:</p>
+<pre class="prettyprint linenums">
+&lt;ul class="thumbnails"&gt;
+  &lt;li class="span4"&gt;
+    &lt;a href="#" class="thumbnail"&gt;
+      &lt;img data-src="holder.js/300x200" alt=""&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+          <p>对于在缩略图里自定义HTML内容, 标记的变化并不大. 为了允许块级内容在任何地方使用, 我们把 <code>&lt;a&gt;</code> 替换成 <code>&lt;div&gt;</code> , 像这样:</p>
+<pre class="prettyprint linenums">
+&lt;ul class="thumbnails"&gt;
+  &lt;li class="span4"&gt;
+    &lt;div class="thumbnail"&gt;
+      &lt;img data-src="holder.js/300x200" alt=""&gt;
+      &lt;h3&gt;Thumbnail label&lt;/h3&gt;
+      &lt;p&gt;Thumbnail caption...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+
+          <h2>更多例子</h2>
+          <p>探讨提供的所有选项的各种网格属性. 你也可以混合使用匹配不同的尺寸.</p>
+          <ul class="thumbnails">
+            <li class="span4">
+              <a href="#" class="thumbnail">
+                <img data-src="holder.js/360x270" alt="">
+              </a>
+            </li>
+            <li class="span3">
+              <a href="#" class="thumbnail">
+                <img data-src="holder.js/260x120" alt="">
+              </a>
+            </li>
+            <li class="span2">
+              <a href="#" class="thumbnail">
+                <img data-src="holder.js/160x120" alt="">
+              </a>
+            </li>
+            <li class="span3">
+              <a href="#" class="thumbnail">
+                <img data-src="holder.js/260x120" alt="">
+              </a>
+            </li>
+            <li class="span2">
+              <a href="#" class="thumbnail">
+                <img data-src="holder.js/160x120" alt="">
+              </a>
+            </li>
+          </ul>
+
+        </section>
+
+
+
+
+        <!-- Alerts
+        ================================================== -->
+        <section id="alerts">
+          <div class="page-header">
+            <h1>通知 <small>成功, 警告, 和错误信息</small></h1>
+          </div>
+
+          <h2>默认</h2>
+          <p>在 <code>.alert</code> 里面添加任何文本内容和关闭按钮.</p>
+          <div class="bs-docs-example">
+            <div class="alert">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <strong>警告!</strong> 温度过高.
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert"&gt;
+  &lt;button type="button" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/button&gt;
+  &lt;strong&gt;警告!&lt;/strong&gt; 温度过高.
+&lt;/div&gt;
+</pre>
+
+          <h3>关闭按钮</h3>
+          <p>在移动设备的Safari和Opera浏览器中, 当使用<code>&lt;a&gt;</code>标签用以关闭通知框, 除了在<code>data-dismiss="alert"</code>属性之外, 还需要包含一个<code>href="#"</code>.</p>
+          <pre class="prettyprint linenums">&lt;a href="#" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/a&gt;</pre>
+          <p>另外, 你可以使用<code>&lt;button&gt;</code>元素的数据属性, 我们的文档就是使用这个元素. 当使用<code>&lt;button&gt;</code>, 必须包含<code>type="button"</code>, 或者表单中没有提交.</p>
+          <pre class="prettyprint linenums">&lt;button type="button" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/button&gt;</pre>
+
+          <h3>通过JavaScript关闭通知</h3>
+          <p>使用 <a href="./javascript.html#alerts">通知(alerts)jQuery插件</a> 快速和容易的关闭通知.</p>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>选项</h2>
+          <p>对于较长的信息, 添加<code>.alert-block</code>增加通知框顶部和底部的padding.</p>
+          <div class="bs-docs-example">
+            <div class="alert alert-block">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <h4>警告!</h4>
+              <p>水温过高！！水温过高！！水温过高！！水温过高！！水温过高！！水温过高！！水温过高！！水温过高！！水温过高！！水温过高！！水温过高！！</p>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-block"&gt;
+  &lt;button type="button" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/button&gt;
+  &lt;h4&gt;Warning!&lt;/h4&gt;
+  水温过高！！水温过高！！水温过高！！水温...
+&lt;/div&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>其他</h2>
+          <p>添加其他属性, 改变通知的含义.</p>
+
+          <h3>错误或危险</h3>
+          <div class="bs-docs-example">
+            <div class="alert alert-error">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <strong>错误!</strong> 添加失败.
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-error"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+          <h3>成功</h3>
+          <div class="bs-docs-example">
+            <div class="alert alert-success">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <strong>不错!</strong> 已成功添加.
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-success"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+          <h3>重要</h3>
+          <div class="bs-docs-example">
+            <div class="alert alert-info">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <strong>注意!</strong> 请细心填写资料, 提交后不能修改.
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-info"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+        </section>
+
+
+
+
+        <!-- Progress bars
+        ================================================== -->
+        <section id="progress">
+          <div class="page-header">
+            <h1>进度条 <small>加载, 重定向, 状态</small></h1>
+          </div>
+
+          <h2>例子</h2>
+
+          <h3>基础</h3>
+          <p>默认的垂直渐变进度条.</p>
+          <div class="bs-docs-example">
+            <div class="progress">
+              <div class="bar" style="width: 60%;"></div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="progress"&gt;
+  &lt;div class="bar" style="width: 60%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>条纹</h3>
+          <p>使用渐变创建一个条纹效果的进度条. 不支持IE6-8(求大家别用IE了!!!!!!!).</p>
+          <div class="bs-docs-example">
+            <div class="progress progress-striped">
+              <div class="bar" style="width: 20%;"></div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="progress progress-striped"&gt;
+  &lt;div class="bar" style="width: 20%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>动画</h3>
+          <p>在 <code>.progress-striped</code> 添加 <code>.active</code> , 创建一个从右到左移动的动画条纹. 同样不支持IE(为了你的身心健康, 请杜绝IE).</p>
+          <div class="bs-docs-example">
+            <div class="progress progress-striped active">
+              <div class="bar" style="width: 45%"></div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="progress progress-striped active"&gt;
+  &lt;div class="bar" style="width: 40%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>堆叠</h3>
+          <p>将多个不同的进度条放在一个 <code>.progress</code> 里来堆叠它们.</p>
+          <div class="bs-docs-example">
+            <div class="progress">
+              <div class="bar bar-success" style="width: 35%"></div>
+              <div class="bar bar-warning" style="width: 20%"></div>
+              <div class="bar bar-danger" style="width: 10%"></div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="progress"&gt;
+  &lt;div class="bar bar-success" style="width: 35%;"&gt;&lt;/div&gt;
+  &lt;div class="bar bar-warning" style="width: 20%;"&gt;&lt;/div&gt;
+  &lt;div class="bar bar-danger" style="width: 10%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>选项</h2>
+
+          <h3>其他颜色</h3>
+          <p>进度条使用一些相同的按钮和通知属性, 以获得一致的风格.</p>
+          <div class="bs-docs-example">
+            <div class="progress progress-info" style="margin-bottom: 9px;">
+              <div class="bar" style="width: 20%"></div>
+            </div>
+            <div class="progress progress-success" style="margin-bottom: 9px;">
+              <div class="bar" style="width: 40%"></div>
+            </div>
+            <div class="progress progress-warning" style="margin-bottom: 9px;">
+              <div class="bar" style="width: 60%"></div>
+            </div>
+            <div class="progress progress-danger">
+              <div class="bar" style="width: 80%"></div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="progress progress-info"&gt;
+  &lt;div class="bar" style="width: 20%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-success"&gt;
+  &lt;div class="bar" style="width: 40%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-warning"&gt;
+  &lt;div class="bar" style="width: 60%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-danger"&gt;
+  &lt;div class="bar" style="width: 80%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3>条纹进度条</h3>
+          <p>类似的纯色, 我们有着各种不同的条纹进度条.</p>
+          <div class="bs-docs-example">
+            <div class="progress progress-info progress-striped" style="margin-bottom: 9px;">
+              <div class="bar" style="width: 20%"></div>
+            </div>
+            <div class="progress progress-success progress-striped" style="margin-bottom: 9px;">
+              <div class="bar" style="width: 40%"></div>
+            </div>
+            <div class="progress progress-warning progress-striped" style="margin-bottom: 9px;">
+              <div class="bar" style="width: 60%"></div>
+            </div>
+            <div class="progress progress-danger progress-striped">
+              <div class="bar" style="width: 80%"></div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="progress progress-info progress-striped"&gt;
+  &lt;div class="bar" style="width: 20%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-success progress-striped"&gt;
+  &lt;div class="bar" style="width: 40%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-warning progress-striped"&gt;
+  &lt;div class="bar" style="width: 60%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-danger progress-striped"&gt;
+  &lt;div class="bar" style="width: 80%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>浏览器的支持</h2>
+          <p>进度条的效果使用了CSS3渐变, 过渡和动画. 这些不支持IE6-9和老版本的火狐.</p>
+          <p>IE10之前的版本和Opera12, 均不支持动画.</p>
+
+        </section>
+
+
+
+
+        <!-- Media object
+        ================================================== -->
+        <section id="media">
+          <div class="page-header">
+            <h1>媒体对象</h1>
+          </div>
+          <p class="lead">建立各种类型的组件的抽象对象样式(像博客评论, Tweets, 等等), 该功能沿着文本内容左对齐或右对齐图像.</p>
+
+          <h2>例子</h2>
+          <p>默认的媒体浮动在一个媒体对象(图像, 视频, 音频)的左边或右边.</p>
+          <div class="bs-docs-example">
+            <div class="media">
+              <a class="pull-left" href="#">
+                <img class="media-object" data-src="holder.js/64x64">
+              </a>
+              <div class="media-body">
+                <h4 class="media-heading">Media heading</h4>
+                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+              </div>
+            </div>
+            <div class="media">
+              <a class="pull-left" href="#">
+                <img class="media-object" data-src="holder.js/64x64">
+              </a>
+              <div class="media-body">
+                <h4 class="media-heading">Media heading</h4>
+                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                <div class="media">
+                  <a class="pull-left" href="#">
+                    <img class="media-object" data-src="holder.js/64x64">
+                  </a>
+                  <div class="media-body">
+                    <h4 class="media-heading">Media heading</h4>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="media"&gt;
+  &lt;a class="pull-left" href="#"&gt;
+    &lt;img class="media-object" data-src="holder.js/64x64"&gt;
+  &lt;/a&gt;
+  &lt;div class="media-body"&gt;
+    &lt;h4 class="media-heading"&gt;Media heading&lt;/h4&gt;
+    ...
+
+    &lt;!-- Nested media object --&gt;
+    &lt;div class="media"&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2>媒体列表</h2>
+          <p>使用一些额外的标记, 你可以让媒体包含在列表内(对评论或文章列表十分有用).</p>
+          <div class="bs-docs-example">
+            <ul class="media-list">
+              <li class="media">
+                <a class="pull-left" href="#">
+                  <img class="media-object" data-src="holder.js/64x64">
+                </a>
+                <div class="media-body">
+                  <h4 class="media-heading">Media heading</h4>
+                  <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                  <!-- Nested media object -->
+                  <div class="media">
+                    <a class="pull-left" href="#">
+                      <img class="media-object" data-src="holder.js/64x64">
+                    </a>
+                    <div class="media-body">
+                      <h4 class="media-heading">Nested media heading</h4>
+                      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                      <!-- Nested media object -->
+                      <div class="media">
+                        <a class="pull-left" href="#">
+                          <img class="media-object" data-src="holder.js/64x64">
+                        </a>
+                        <div class="media-body">
+                          <h4 class="media-heading">Nested media heading</h4>
+                          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Nested media object -->
+                  <div class="media">
+                    <a class="pull-left" href="#">
+                      <img class="media-object" data-src="holder.js/64x64">
+                    </a>
+                    <div class="media-body">
+                      <h4 class="media-heading">Nested media heading</h4>
+                      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="media">
+                <a class="pull-right" href="#">
+                  <img class="media-object" data-src="holder.js/64x64">
+                </a>
+                <div class="media-body">
+                  <h4 class="media-heading">Media heading</h4>
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                </div>
+              </li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="media-list"&gt;
+  &lt;li class="media"&gt;
+    &lt;a class="pull-left" href="#"&gt;
+      &lt;img class="media-object" data-src="holder.js/64x64"&gt;
+    &lt;/a&gt;
+    &lt;div class="media-body"&gt;
+      &lt;h4 class="media-heading"&gt;Media heading&lt;/h4&gt;
+      ...
+
+      &lt;!-- Nested media object --&gt;
+      &lt;div class="media"&gt;
+        ...
+     &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+</section>
+
+
+
+
+
+        <!-- Miscellaneous
+        ================================================== -->
+        <section id="misc">
+          <div class="page-header">
+            <h1>其他 <small>轻量级的实用组件</small></h1>
+          </div>
+
+          <h2>块</h2>
+          <p>一个简单的元素效果, 给它添加另一个效果.</p>
+          <div class="bs-docs-example">
+            <div class="well">
+              Look, I'm in a well!
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="well"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+          <h3>可选</h3>
+          <p>有两个可选修饰属性, 控制padding和圆角.</p>
+          <div class="bs-docs-example">
+            <div class="well well-large">
+              Look, I'm in a well!
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="well well-large"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+          <div class="bs-docs-example">
+            <div class="well well-small">
+              Look, I'm in a well!
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="well well-small"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+          <h2>关闭图标</h2>
+          <p>使用通用的关闭图标来关闭内容(像对话框和通知框).</p>
+          <div class="bs-docs-example">
+            <p><button class="close" style="float: none;">&times;</button></p>
+          </div>
+          <pre class="prettyprint linenums">&lt;button class="close"&gt;&amp;times;&lt;/button&gt;</pre>
+          <p>如果你使用a标签, 在iOS设备需要包含一个 <code>href="#"</code> 用作点击事件.</p>
+          <pre class="prettyprint linenums">&lt;a class="close" href="#"&gt;&amp;times;&lt;/a&gt;</pre>
+
+          <h2>辅助属性</h2>
+          <p>简单的, 集中的为小屏幕或行为做调整.</p>
+
+          <h4>.pull-left</h4>
+          <p>左浮动元素</p>
+<pre class="prettyprint linenums">
+class="pull-left"
+</pre>
+<pre class="prettyprint linenums">
+.pull-left {
+  float: left;
+}
+</pre>
+
+          <h4>.pull-right</h4>
+          <p>右浮动元素</p>
+<pre class="prettyprint linenums">
+class="pull-right"
+</pre>
+<pre class="prettyprint linenums">
+.pull-right {
+  float: right;
+}
+</pre>
+
+          <h4>.muted</h4>
+          <p>改变元素颜色为 <code>#999</code></p>
+<pre class="prettyprint linenums">
+class="muted"
+</pre>
+<pre class="prettyprint linenums">
+.muted {
+  color: #999;
+}
+</pre>
+
+          <h4>.clearfix</h4>
+          <p>清除元素<code>浮动</code></p>
+<pre class="prettyprint linenums">
+class="clearfix"
+</pre>
+<pre class="prettyprint linenums">
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+</pre>
+
+        </section>
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <p>由 <a href="http://twitter.com/mdo" target="_blank">@mdo</a> 和 <a href="http://twitter.com/fat" target="_blank">@fat</a> 用世界上最具特别的爱来设计和建造.</p>
+        <p>代码许可依据<a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, 文档许可依据<a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p><a href="http://glyphicons.com">Glyphicons Free</a> 授权依据 <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p>译者: iXieMin <a href="http://xiemin.me/" target="_blank">博客</a> <a href="http://weibo.com/ixiemin" target="_blank">微博</a></p>
+        <ul class="footer-links">
+          <li><a href="http://blog.getbootstrap.com">博客</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="https://github.com/twitter/bootstrap/issues?state=open">问题</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="https://github.com/twitter/bootstrap/blob/master/CHANGELOG.md">更改记录</a></li>
+        </ul>
+      </div>
+    </footer>
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>-->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
+
+    <script src="assets/js/holder/holder.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+
+    <script src="assets/js/application.js"></script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-34583971-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+
+  </body>
+</html>

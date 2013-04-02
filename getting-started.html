@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>入门 · Bootstrap 2.3.1 - 中文翻译 - iXieMin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+  </head>
+
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">Bootstrap</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="./index.html">首页</a>
+              </li>
+              <li class="active">
+                <a href="./getting-started.html">入门</a>
+              </li>
+              <li class="">
+                <a href="./scaffolding.html">框架</a>
+              </li>
+              <li class="">
+                <a href="./base-css.html">基础CSS</a>
+              </li>
+              <li class="">
+                <a href="./components.html">组件</a>
+              </li>
+              <li class="">
+                <a href="./javascript.html">JavaScript</a>
+              </li>
+              <li class="">
+                <a href="./customize.html">自定义</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1>入门</h1>
+    <p class="lead">概述项目和内容, 及其如何开始使用一个简单的模板.</p>
+  </div>
+</header>
+
+
+  <div class="container">
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+      <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav">
+          <li><a href="#download-bootstrap"><i class="icon-chevron-right"></i> 下载</a></li>
+          <li><a href="#file-structure"><i class="icon-chevron-right"></i> 文件结构</a></li>
+          <li><a href="#contents"><i class="icon-chevron-right"></i> 包含的内容</a></li>
+          <li><a href="#html-template"><i class="icon-chevron-right"></i> HTML 模板</a></li>
+          <li><a href="#examples"><i class="icon-chevron-right"></i> 例子</a></li>
+          <li><a href="#what-next"><i class="icon-chevron-right"></i> 接下来?</a></li>
+        </ul>
+      </div>
+      <div class="span9">
+
+
+
+        <!-- Download
+        ================================================== -->
+        <section id="download-bootstrap">
+          <div class="page-header">
+            <h1>1. 下载</h1>
+          </div>
+          <p class="lead">在下载前，请确保有一个代码编辑器(我们建议使用 <a href="http://sublimetext.com/2">Sublime Text 2</a>) 和了解一些HTML和CSS的知识. 我们不会在这里讨论源文件, 但他们是可提供下载的. 我们将专注于如何入门已经完成好的Bootstrap.</p>
+
+          <div class="row-fluid">
+            <div class="span6">
+              <h2>下载已编译完成文件</h2>
+              <p><strong>最快速的开始方式:</strong> 获得已编译和压缩版本的CSS, JS和图像. 没有文档和原文件.</p>
+              <p><a class="btn btn-large btn-primary" href="assets/bootstrap.zip" >下载 Bootstrap</a></p>
+            </div>
+            <div class="span6">
+              <h2>下载源文件</h2>
+              <p>从GitHub直接下载最新版本，获取所有CSS和JavaScript的源文件, 以及文档.</p>
+              <p><a class="btn btn-large" href="https://github.com/twitter/bootstrap/zipball/master" >下载 Bootstrap 源文件</a></p>
+            </div>
+          </div>
+        </section>
+
+
+
+        <!-- File structure
+        ================================================== -->
+        <section id="file-structure">
+          <div class="page-header">
+            <h1>2. 文件结构</h1>
+          </div>
+          <p class="lead">下载之后你会发现以下文件的结构和内容, 逻辑分组常用资源和提供完整版和压缩版.</p>
+          <p>下载完成后, 解压压缩文件会看到Bootstrap的结构. 你将会看到如下结构:</p>
+<pre class="prettyprint">
+  bootstrap/
+  ├── css/
+  │   ├── bootstrap.css
+  │   ├── bootstrap.min.css
+  ├── js/
+  │   ├── bootstrap.js
+  │   ├── bootstrap.min.js
+  └── img/
+      ├── glyphicons-halflings.png
+      └── glyphicons-halflings-white.png
+</pre>
+          <p>这是Bootstrap最基本的形式: 文件可以快速使用在几乎所有的Web项目. 我们提供编译的CSS和JS (<code>bootstrap.*</code>), 以及压缩版的CSS和JS(<code>bootstrap.min.*</code>). 图像文件使用 <a href="http://imageoptim.com/">ImageOptim</a> 进行压缩, 它是一个用于压缩PNG图像的Mac应用程序. </p>
+          <p>请注意, 所有的JavaScript插件都需要包含jQuery.</p>
+        </section>
+
+
+
+        <!-- Contents
+        ================================================== -->
+        <section id="contents">
+          <div class="page-header">
+            <h1>3. 包含的内容</h1>
+          </div>
+          <p class="lead">Bootstrap为各式各样的东西配备有HTML, CSS和JS, 但它们可以被概括成少数几个在<a href="http://getbootstrap.com">Bootstrap 文档</a>顶部可见的类别.</p>
+
+          <h2>文档部分</h2>
+          <h4><a href="http://twitter.github.com/bootstrap/scaffolding.html">框架</a></h4>
+          <p>对body属性和背景重置的全局样式, 链接样式, 网格系统(栅格系统), 和两个简单的布局.</p>
+          <h4><a href="http://twitter.github.com/bootstrap/base-css.html">基础CSS</a></h4>
+          <p>常见的HTML元素, 如排版, 代码, 表格, 表单, 和按钮等样式. 还包括 <a href="http://glyphicons.com">Glyphicons</a>, 一个不错的小图标集.</p>
+          <h4><a href="http://twitter.github.com/bootstrap/components.html">组件</a></h4>
+          <p>常见界面组件, 如标签和圆角, 导航, 警示, 页面标题等基本样式.</p>
+          <h4><a href="http://twitter.github.com/bootstrap/javascript.html">JavaScript插件</a></h4>
+          <p>这些JavaScript插件是互动的组成部分, 类似组件, 如提示工具, 提示框, modals(对话框)等.</p>
+
+          <h2>组件列表</h2>
+          <p><strong>组件</strong> 和 <strong>JavaScript插件</strong> 提供了以下界面元素:</p>
+          <ul>
+            <li>Button groups</li>
+            <li>Button dropdowns</li>
+            <li>Navigational tabs, pills, and lists</li>
+            <li>Navbar</li>
+            <li>Labels</li>
+            <li>Badges</li>
+            <li>Page headers and hero unit</li>
+            <li>Thumbnails</li>
+            <li>Alerts</li>
+            <li>Progress bars</li>
+            <li>Modals</li>
+            <li>Dropdowns</li>
+            <li>Tooltips</li>
+            <li>Popovers</li>
+            <li>Accordion</li>
+            <li>Carousel</li>
+            <li>Typeahead</li>
+          </ul>
+          <p>在未来的指南中, 我们可以慢慢的通过这些组件分别介绍更多的细节. 在此之前, 文档的内容都是介绍如何使用并定制它们.</p>
+        </section>
+
+
+
+        <!-- HTML template
+        ================================================== -->
+        <section id="html-template">
+          <div class="page-header">
+            <h1>4. HTML 模板</h1>
+          </div>
+          <p class="lead">用一个简短介绍插入到内容的方式, 可以让我们专注于对Bootstrap的使用. 要做到这一点, 我们将利用一个基本的HTML模板, 其中包括我们所提到的<a href="#file-structure">文件结构</a>.</p>
+          <p>现在, 这里是一个<strong>典型的HTML文件</strong>:</p>
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Bootstrap 101 Template&lt;/title&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+    &lt;script src="http://code.jquery.com/jquery.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+          <p>要变为<strong>一个Bootstrap模板</strong>, 只需包含相应的 CSS 和 JS 文件:</p>
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Bootstrap 101 Template&lt;/title&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;!-- Bootstrap --&gt;
+    &lt;link href="css/bootstrap.min.css" rel="stylesheet" media="screen"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+    &lt;script src="http://code.jquery.com/jquery.js"&gt;&lt;/script&gt;
+    &lt;script src="js/bootstrap.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+          <p><strong>设置成功! </strong> 加入这两个文件, 你就可以通过Bootstrap开始开发任何网站和应用程序.</p>
+        </section>
+
+
+
+        <!-- Examples
+        ================================================== -->
+        <section id="examples">
+          <div class="page-header">
+            <h1>5. 例子</h1>
+          </div>
+          <p class="lead">大胆超越以下几个模板. 我们鼓励开发者对这些例子进行扩展开发, 而不是简单的把它们作为最终结果来使用.</p>
+          <ul class="thumbnails bootstrap-examples">
+            <li class="span3">
+              <a class="thumbnail" href="examples/starter-template.html">
+                <img src="assets/img/examples/bootstrap-example-starter.png" alt="">
+              </a>
+              <h4>入门模板</h4>
+              <p>一个包含Bootstrap CSS和JavaScript的精简HTML文件.</p>
+            </li>
+            <li class="span3">
+              <a class="thumbnail" href="examples/hero.html">
+                <img src="assets/img/examples/bootstrap-example-marketing.png" alt="">
+              </a>
+              <h4>基本的营销类网站</h4>
+              <p>拥有一个主要消息框和三个支撑元素(supporting elements).</p>
+            </li>
+            <li class="span3">
+              <a class="thumbnail" href="examples/fluid.html">
+                <img src="assets/img/examples/bootstrap-example-fluid.png" alt="">
+              </a>
+              <h4>流式布局</h4>
+              <p>使用我们最新的响应式设计元素, 通过流式网格(栅格)系统建立一个无缝的液态布局.</p>
+            </li>
+
+            <li class="span3">
+              <a class="thumbnail" href="examples/marketing-narrow.html">
+                <img src="assets/img/examples/bootstrap-example-marketing-narrow.png" alt="">
+              </a>
+              <h4>精简版的营销类网站</h4>
+              <p>对于小项目或团队使用的简单、轻量级的营销类模板.</p>
+            </li>
+            <li class="span3">
+              <a class="thumbnail" href="examples/justified-nav.html">
+                <img src="assets/img/examples/bootstrap-example-justified-nav.png" alt="">
+              </a>
+              <h4>合理导航</h4>
+              <p>带有一个等宽导航的营销类页面.</p>
+            </li>
+            <li class="span3">
+              <a class="thumbnail" href="examples/signin.html">
+                <img src="assets/img/examples/bootstrap-example-signin.png" alt="">
+              </a>
+              <h4>登录</h4>
+              <p>一个自定义的准登录框, 较大的表单控件和灵活的布局.</p>
+            </li>
+
+            <li class="span3">
+              <a class="thumbnail" href="examples/sticky-footer.html">
+                <img src="assets/img/examples/bootstrap-example-sticky-footer.png" alt="">
+              </a>
+              <h4>粘页脚(Sticky footer)</h4>
+              <p>固定高度的页脚紧贴页面底部.</p>
+            </li>
+            <li class="span3">
+              <a class="thumbnail" href="examples/carousel.html">
+                <img src="assets/img/examples/bootstrap-example-carousel.png" alt="">
+              </a>
+              <h4>大屏幕轮播Banner</h4>
+              <p>一个更具交互、突出轮播的基本营销类网站.</p>
+            </li>
+          </ul>
+        </section>
+
+
+
+
+        <!-- Next
+        ================================================== -->
+        <section id="what-next">
+          <div class="page-header">
+            <h1>接下来?</h1>
+          </div>
+          <p class="lead">查看文档顶部的分类, 例子和代码片段, 或自定义Bootstrap为你即将开展的项目做一次彻底改变.</p>
+          <a class="btn btn-large btn-primary" href="./scaffolding.html" >查看Bootstrap文档</a>
+          <a class="btn btn-large" href="./customize.html" style="margin-left: 5px;" >自定义Bootstrap</a>
+        </section>
+
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <p>由 <a href="http://twitter.com/mdo" target="_blank">@mdo</a> 和 <a href="http://twitter.com/fat" target="_blank">@fat</a> 用世界上最具特别的爱来设计和建造.</p>
+        <p>代码许可依据<a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, 文档许可依据<a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p><a href="http://glyphicons.com">Glyphicons Free</a> 授权依据 <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p>译者: iXieMin <a href="http://xiemin.me/" target="_blank">博客</a> <a href="http://weibo.com/ixiemin" target="_blank">微博</a></p>
+        <ul class="footer-links">
+          <li><a href="http://blog.getbootstrap.com">博客</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="https://github.com/twitter/bootstrap/issues?state=open">问题</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="https://github.com/twitter/bootstrap/blob/master/CHANGELOG.md">更改记录</a></li>
+        </ul>
+      </div>
+    </footer>
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
+
+    <script src="assets/js/holder/holder.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+
+    <script src="assets/js/application.js"></script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-34583971-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+
+  </body>
+</html>

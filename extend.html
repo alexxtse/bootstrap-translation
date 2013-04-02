@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>扩展 · Bootstrap 2.3.1 - 中文翻译 - iXieMin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+  </head>
+
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">Bootstrap</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="./index.html">首页</a>
+              </li>
+              <li class="">
+                <a href="./getting-started.html">入门</a>
+              </li>
+              <li class="">
+                <a href="./scaffolding.html">框架</a>
+              </li>
+              <li class="">
+                <a href="./base-css.html">基础CSS</a>
+              </li>
+              <li class="">
+                <a href="./components.html">组件</a>
+              </li>
+              <li class="">
+                <a href="./javascript.html">JavaScript</a>
+              </li>
+              <li class="">
+                <a href="./customize.html">自定义</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1>扩展 Bootstrap</h1>
+    <p class="lead">扩展的内容让样式和组件更好的利用, 以及包含了LESS.</p>
+  <div>
+</header>
+
+  <div class="container">
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+      <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav">
+          <li><a href="#built-with-less"><i class="icon-chevron-right"></i> 通过LESS构建</a></li>
+          <li><a href="#compiling"><i class="icon-chevron-right"></i> 编译Bootstrap</a></li>
+          <li><a href="#static-assets"><i class="icon-chevron-right"></i> 使用静态assets</a></li>
+        </ul>
+      </div>
+      <div class="span9">
+
+
+
+        <!-- BUILT WITH LESS
+        ================================================== -->
+        <section id="built-with-less">
+          <div class="page-header">
+            <h1>通过LESS构建</h1>
+          </div>
+
+          <img style="float: right; height: 36px; margin: 10px 20px 20px" src="assets/img/less-logo-large.png" alt="LESS CSS">
+          <p class="lead">Bootstrap是以LESS为核心, LESS动态样式语言由我们一个好朋友创建, <a href="http://cloudhead.io">Alexis Sellier</a>. 这让基于CSS系统的开发更快, 更容易, 更有趣.</p>
+
+          <h3>为什么是LESS?</h3>
+          <p>Bootstrap创作者之一写了一篇 <a href="http://www.wordsbyf.at/2012/03/08/why-less/">博客</a>, 下面是一些概括:</p>
+          <ul>
+            <li>使用LESS编译Bootstrap, 比Sass快6倍</li>
+            <li>Less是写在JavaScript中, 比Ruby下的Sass，这让我们更容易融入其中和修改.</li>
+            <li>Less拥有更多(少即是多); 我们想要的感觉就是我们在编写CSS和制作Bootstrap的时候是平易近人的.</li>
+          </ul>
+
+          <h3>包含些什么?</h3>
+          <p>LESS包含了一些变量, 可重复使用的代码, 一些简单的数学操作, 嵌套, 甚至包含颜色功能.</p>
+
+          <h3>了解更多</h3>
+          <p>查看官方网站 <a href="http://lesscss.org">http://lesscss.org</a> 了解更多.</p>
+        </section>
+
+
+
+        <!-- COMPILING LESS AND BOOTSTRAP
+        ================================================== -->
+        <section id="compiling">
+          <div class="page-header">
+            <h1>编译Bootstrap</h1>
+          </div>
+
+          <p class="lead">由于我们的CSS是通过LESS, 并使用了其变量和mixins, 所以这是需要编译才能最终使用. 下面是说明如何编译.</p>
+
+          <div class="alert alert-info">
+            <strong>注意:</strong> 如果你提交一些改进的CSS到GitHub的pull request, 你<strong>必须</strong>通过这些任意一种方法来重新编译你的CSS.
+          </div>
+
+          <h2>编译工具</h2>
+
+          <h3>命令行</h3>
+          <p>可根据GitHub的<a href="https://github.com/twitter/bootstrap#developers">项目readme指示</a>通过命令行完成编译.</p>
+
+          <h3>JavaScript</h3>
+          <p><a href="http://lesscss.org/">下载最新的Less.js</a>并在<code>&lt;head&gt;</code>里引用它.</p>
+<pre class="prettyprint">
+&lt;link rel="stylesheet/less" href="/path/to/bootstrap.less"&gt;
+&lt;script src="/path/to/less.js"&gt;&lt;/script&gt;
+</pre>
+          <p>只需保存它们并刷新页面, 就可以重编译.less文件. Less.js会编译它们并存储在本地.</p>
+
+          <h3>非官方的Mac应用程序</h3>
+          <p><a href="http://incident57.com/less/">非官方的Mac应用程序</a>监视.less文件目录并编译本地每次保存后的.less文件. 假如你喜欢, 你可以在应用程序设置编好来自动缩减和结束某个目录文件的编译.</p>
+
+          <h3>更多应用程序</h3>
+          <h4><a href="http://crunchapp.net/" target="_blank">Crunch</a></h4>
+          <p>Crunch是由Adobe Air构建的一个非常好看的LESS编辑器和编译器.</p>
+          <h4><a href="http://incident57.com/codekit/" target="_blank">CodeKit</a></h4>
+          <p>CodeKit是一个Mac应用程序, 可编译LESS, SASS, Stylus, 和 CoffeeScript.</p>
+          <h4><a href="http://wearekiss.com/simpless" target="_blank">Simpless</a></h4>
+          <p>Mac, Linux, 和 Windows 应用程序, 通过拖放来编译LESS文件. 另外, 该应用程序的源代码放在了<a href="https://github.com/Paratron/SimpLESS" target="_blank">GitHub</a>.</p>
+
+        </section>
+
+
+
+        <!-- Static assets
+        ================================================== -->
+        <section id="static-assets">
+          <div class="page-header">
+            <h1>使用静态assets</h1>
+          </div>
+          <p class="lead">通过已经编译好或压缩好的CSS和JS, <a href="./getting-started.html">快速入门</a>任何网站.  把自定义样式单独分开便于未来的升级和维护.</p>
+
+          <h3>设置文件结构</h3>
+          <p>下载最新已编译好的Bootstrap并放置在你的项目中. 比如, 你可以像下面这样:</p>
+<pre>
+  <span class="icon-folder-open"></span> app/
+      <span class="icon-folder-open"></span> layouts/
+      <span class="icon-folder-open"></span> templates/
+  <span class="icon-folder-open"></span> public/
+      <span class="icon-folder-open"></span> css/
+          <span class="icon-file"></span> bootstrap.min.css
+      <span class="icon-folder-open"></span> js/
+          <span class="icon-file"></span> bootstrap.min.js
+      <span class="icon-folder-open"></span> img/
+          <span class="icon-file"></span> glyphicons-halflings.png
+          <span class="icon-file"></span> glyphicons-halflings-white.png
+</pre>
+
+          <h3>使用初学者的模板</h3>
+          <p>复制下面的HTML, 保存并开始预览.</p>
+<pre class="prettyprint linenums">
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Bootstrap 101 Template&lt;/title&gt;
+    &lt;!-- Bootstrap --&gt;
+    &lt;link href="public/css/bootstrap.min.css" rel="stylesheet"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+    &lt;!-- Bootstrap --&gt;
+    &lt;script src="public/js/bootstrap.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+          <h3>自定义的代码层</h3>
+          <p>自定义的CSS, JS和更多需要Bootstrap的地方, 都需要把文件单独出来.</p>
+<pre class="prettyprint linenums">
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Bootstrap 101 Template&lt;/title&gt;
+    &lt;!-- Bootstrap --&gt;
+    &lt;link href="public/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;!-- Project --&gt;
+    &lt;link href="public/css/application.css" rel="stylesheet"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+    &lt;!-- Bootstrap --&gt;
+    &lt;script src="public/js/bootstrap.min.js"&gt;&lt;/script&gt;
+    &lt;!-- Project --&gt;
+    &lt;script src="public/js/application.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+        </section>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <p>由 <a href="http://twitter.com/mdo" target="_blank">@mdo</a> 和 <a href="http://twitter.com/fat" target="_blank">@fat</a> 用世界上最具特别的爱来设计和建造.</p>
+        <p>代码许可依据<a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, 文档许可依据<a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p><a href="http://glyphicons.com">Glyphicons Free</a> 授权依据 <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p>译者: iXieMin <a href="http://xiemin.me/" target="_blank">博客</a> <a href="http://weibo.com/ixiemin" target="_blank">微博</a></p>
+        <ul class="footer-links">
+          <li><a href="http://blog.getbootstrap.com">博客</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="https://github.com/twitter/bootstrap/issues?state=open">问题</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="https://github.com/twitter/bootstrap/blob/master/CHANGELOG.md">更改记录</a></li>
+        </ul>
+      </div>
+    </footer>
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
+
+    <script src="assets/js/holder/holder.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+
+    <script src="assets/js/application.js"></script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-34583971-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+
+  </body>
+</html>
